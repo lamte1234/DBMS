@@ -1,0 +1,401 @@
+,film_id,title,certificate,release_year,length,description,rating,director_id
+0,1,The Trial of the Chicago 7,R,(2020),129 min,"
+    The story of 7 people on trial stemming from various charges surrounding the uprising at the 1968 Democratic National Convention in Chicago, Illinois.",7.9,15
+1,2,Tenet,PG-13,(2020),150 min,"
+    Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",7.8,76
+2,3,The Gentlemen,R,(2019),113 min,"
+    An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.",7.9,47
+3,4,Rebecca,Approved,(1940),130 min,"
+    A self-conscious woman juggles adjusting to her new role as an aristocrat's wife and avoiding being intimidated by his first wife's spectral presence.",8.1,22
+4,5,Moneyball,PG-13,(2011),133 min,"
+    Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.",7.6,118
+5,6,The Nightmare Before Christmas,PG,(1993),76 min,"
+    Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.",8.0,102
+6,7,Ferris Bueller's Day Off,PG-13,(1986),103 min,"
+    A high school wise guy is determined to have a day off from school, despite what the Principal thinks of that.",7.8,13
+7,8,Halloween,R,(1978),91 min,"
+    Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",7.8,60
+8,9,The Shining,R,(1980),146 min,"
+    A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",8.4,21
+9,10,1917,R,(2019),119 min,"
+    April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.",8.3,5
+10,11,Harry Potter and the Sorcerer's Stone,PG,(2001),152 min,"
+    An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",7.6,122
+11,12,Once Upon a Time... In Hollywood,R,(2019),161 min,"
+    A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",7.6,19
+12,13,Knives Out,PG-13,(2019),130 min,"
+    A detective investigates the death of a patriarch of an eccentric, combative family.",7.9,48
+13,14,One Flew Over the Cuckoo's Nest,R,(1975),133 min,"
+    A criminal pleads insanity and is admitted to a mental institution, where he rebels against the oppressive nurse and rallies up the scared patients.",8.7,94
+14,15,Avengers: Endgame,PG-13,(2019),181 min,"
+    After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",8.4,44
+15,16,Parasite,R,(2019),132 min,"
+    Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",8.6,39
+16,17,Joker,R,(2019),122 min,"
+    In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",8.5,7
+17,18,The Wolf of Wall Street,R,(2013),180 min,"
+    Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",8.2,81
+18,19,The Shawshank Redemption,R,(1994),142 min,"
+    Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",9.3,120
+19,20,The Silence of the Lambs,R,(1991),118 min,"
+    A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",8.6,50
+20,21,Back to the Future,PG,(1985),116 min,"
+    Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",8.5,115
+21,22,Hamilton,PG-13,(2020),160 min,"
+    The real life of one of America's foremost founding fathers and first Secretary of the Treasury, Alexander Hamilton. Captured live on Broadway from the Richard Rodgers Theater with the original Broadway cast.",8.7,73
+22,23,The Godfather,R,(1972),175 min,"
+    The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",9.2,109
+23,24,Interstellar,PG-13,(2014),169 min,"
+    A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",8.6,76
+24,25,The Dark Knight,PG-13,(2008),152 min,"
+    When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",9.0,76
+25,26,Ghostbusters,PG,(1984),105 min,"
+    Three former parapsychology professors set up shop as a unique ghost removal service.",7.8,42
+26,27,Jojo Rabbit,PG-13,(2019),108 min,"
+    A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.",7.9,53
+27,28,Pulp Fiction,R,(1994),154 min,"
+    The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",8.9,19
+28,29,The Exorcist,R,(1973),122 min,"
+    When a 12-year-old girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her.",8.0,24
+29,30,Spider-Man: Into the Spider-Verse,PG,(2018),117 min,"
+    Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",8.4,74
+30,31,The Thing,R,(1982),109 min,"
+    A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",8.1,60
+31,32,Inception,PG-13,(2010),148 min,"
+    A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",8.8,76
+32,33,Psycho,R,(1960),109 min,"
+    A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",8.5,22
+33,34,Ford v Ferrari,PG-13,(2019),152 min,"
+    American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.",8.1,67
+34,35,The Lord of the Rings: The Fellowship of the Ring,PG-13,(2001),178 min,"
+    A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",8.8,105
+35,36,Alien,R,(1979),117 min,"
+    After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",8.4,104
+36,37,Little Women,PG,(2019),135 min,"
+    Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms.",7.8,30
+37,38,Fargo,R,(1996),98 min,"
+    Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.",8.1,88
+38,39,Avengers: Infinity War,PG-13,(2018),149 min,"
+    The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",8.4,44
+39,40,Titanic,PG-13,(1997),194 min,"
+    A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",7.8,59
+40,41,Harry Potter and the Goblet of Fire,PG-13,(2005),157 min,"
+    Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.",7.7,2
+41,42,Inglourious Basterds,R,(2009),153 min,"
+    In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",8.3,19
+42,43,Blade Runner 2049,R,(2017),164 min,"
+    Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",8.0,36
+43,44,Call Me by Your Name,R,(2017),132 min,"
+    In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father's research assistant.",7.9,45
+44,45,Se7en,R,(1995),127 min,"
+    Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",8.6,49
+45,46,The Matrix,R,(1999),136 min,"
+    When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",8.7,86
+46,47,Deadpool 2,R,(2018),119 min,"
+    Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool), brings together a team of fellow mutant rogues to protect a young boy with supernatural abilities from the brutal, time-traveling cyborg Cable.",7.7,16
+47,48,The Big Lebowski,R,(1998),117 min,"
+    Jeff ""The Dude"" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.",8.1,88
+48,49,Goodfellas,R,(1990),146 min,"
+    The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",8.7,81
+49,50,Watchmen,R,(2009),162 min,"
+    In 1985 where former superheroes exist, the murder of a colleague sends active vigilante Rorschach into his own sprawling investigation, uncovering something that could completely change the course of history as we know it.",7.6,89
+50,51,Get Out,R,(I) (2017),104 min,"
+    A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",7.7,51
+51,52,Forrest Gump,PG-13,(1994),142 min,"
+    The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",8.8,115
+52,53,Fight Club,R,(1999),139 min,"
+    An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",8.8,49
+53,54,Mad Max: Fury Road,R,(2015),120 min,"
+    In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",8.1,11
+54,55,Harry Potter and the Deathly Hallows: Part 2,PG-13,(2011),130 min,"
+    Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.",8.1,46
+55,56,Requiem for a Dream,R,(2000),102 min,"
+    The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",8.3,69
+56,57,The Departed,R,(2006),151 min,"
+    An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",8.5,81
+57,58,Dazed and Confused,R,(1993),102 min,"
+    The adventures of high school and junior high students on the last day of school in May 1976.",7.6,35
+58,59,Thor: Ragnarok,PG-13,(2017),130 min,"
+    Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.",7.9,53
+59,60,The Birds,PG-13,(1963),119 min,"
+    A wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the bizarre when birds of all kinds suddenly begin to attack people.",7.7,22
+60,61,Gone Girl,R,(2014),149 min,"
+    With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",8.1,49
+61,62,Zodiac,R,(2007),157 min,"
+    In the late 1960s/early 1970s, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.",7.7,49
+62,63,Harry Potter and the Prisoner of Azkaban,PG,(2004),142 min,"
+    Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.",7.9,84
+63,64,The Irishman,R,(2019),209 min,"
+    An old man recalls his time painting houses for his friend, Jimmy Hoffa, through the 1950-70s.",7.9,81
+64,65,The Goonies,PG,(1985),114 min,"
+    A group of young misfits called The Goonies discover an ancient map and set out on an adventure to find a legendary pirate's long-lost treasure.",7.8,91
+65,66,Pride & Prejudice,PG,(2005),129 min,"
+    Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?",7.8,97
+66,67,Tombstone,R,(1993),130 min,"
+    A successful lawman's plans to retire anonymously in Tombstone, Arizona are disrupted by the kind of outlaws he was famous for eliminating.",7.8,103
+67,68,The Dark Knight Rises,PG-13,(2012),164 min,"
+    Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.",8.4,76
+68,69,Coraline,PG,(2009),100 min,"
+    An adventurous 11-year-old girl finds another world that is a strangely idealized version of her frustrating home, but it has sinister secrets.",7.7,102
+69,70,The Social Network,PG-13,(2010),120 min,"
+    As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.",7.7,49
+70,71,Guardians of the Galaxy,PG-13,(2014),121 min,"
+    A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",8.0,66
+71,72,Baby Driver,R,(2017),113 min,"
+    After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.",7.6,68
+72,73,Deadpool,R,(2016),108 min,"
+    A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.",8.0,71
+73,74,Schindler's List,R,(1993),195 min,"
+    In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",8.9,101
+74,75,American Beauty,R,(1999),122 min,"
+    A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",8.3,5
+75,76,The Fifth Element,PG-13,(1997),126 min,"
+    In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.",7.7,77
+76,77,The Peanut Butter Falcon,PG-13,(2019),97 min,"
+    Zak runs away from his care home to make his dream of becoming a wrestler come true.",7.6,87
+77,78,Coco,PG,(I) (2017),105 min,"
+    Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",8.4,54
+78,79,Gladiator,R,(2000),155 min,"
+    A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",8.5,104
+79,80,Django Unchained,R,(2012),165 min,"
+    With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",8.4,19
+80,81,E.T. the Extra-Terrestrial,PG,(1982),115 min,"
+    A troubled child summons the courage to help a friendly alien escape Earth and return to his home world.",7.8,101
+81,82,The Green Mile,R,(1999),189 min,"
+    The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",8.6,120
+82,83,Edward Scissorhands,PG-13,(1990),105 min,"
+    An artificial man, who was incompletely constructed and has scissors for hands, leads a solitary life. Then one day, a suburban lady meets him and introduces him to her world.",7.9,119
+83,84,Léon: The Professional,R,(1994),110 min,"
+    Mathilda, a 12-year-old girl, is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",8.5,77
+84,85,Casino Royale,PG-13,(2006),144 min,"
+    After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.",8.0,1
+85,86,The Lord of the Rings: The Return of the King,PG-13,(2003),201 min,"
+    Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",8.9,105
+86,87,Mission: Impossible - Fallout,PG-13,(2018),147 min,"
+    Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",7.7,93
+87,88,Dunkirk,PG-13,(2017),106 min,"
+    Allied soldiers from Belgium, the British Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",7.9,76
+88,89,The Prestige,PG-13,(2006),130 min,"
+    After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",8.5,76
+89,90,American Psycho,R,(2000),101 min,"
+    A wealthy New York City investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies.",7.6,121
+90,91,Drive,R,(I) (2011),100 min,"
+    A mysterious Hollywood stuntman and mechanic moonlights as a getaway driver and finds himself in trouble when he helps out his neighbor in this action drama.",7.8,31
+91,92,No Country for Old Men,R,(2007),122 min,"
+    Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",8.1,9
+92,93,Apocalypse Now,R,(1979),147 min,"
+    A U.S. Army officer serving in Vietnam is tasked with assassinating a renegade Special Forces Colonel who sees himself as a god.",8.4,109
+93,94,Jurassic Park,PG-13,(1993),127 min,"
+    A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",8.1,101
+94,95,Taxi Driver,R,(1976),114 min,"
+    A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action by attempting to liberate a presidential campaign worker and an underage prostitute.",8.3,81
+95,96,Spotlight,R,(I) (2015),129 min,"
+    The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.",8.1,83
+96,97,The Princess Bride,PG,(1987),98 min,"
+    While home sick in bed, a young boy's grandfather reads him the story of a farmboy-turned-pirate who encounters numerous obstacles, enemies and allies in his quest to be reunited with his true love.",8.1,78
+97,98,Avatar,PG-13,(2009),162 min,"
+    A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",7.8,59
+98,99,Airplane!,PG,(1980),88 min,"
+    A man afraid to fly must ensure that a plane lands safely after the pilots become sick.",7.7,26
+99,100,Prisoners,R,(2013),153 min,"
+    When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.",8.1,36
+100,101,Aliens,R,(1986),137 min,"
+    Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have impressive firepower, but will that be enough?",8.3,59
+101,102,Batman Begins,PG-13,(2005),140 min,"
+    After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",8.2,76
+102,103,The Sixth Sense,PG-13,(1999),107 min,"
+    A boy who communicates with spirits seeks the help of a disheartened child psychologist.",8.1,70
+103,104,Harry Potter and the Half-Blood Prince,PG,(2009),153 min,"
+    As Harry Potter (Daniel Radcliffe) begins his sixth year at Hogwarts, he discovers an old book marked as ""the property of the Half-Blood Prince"" and begins to learn more about Lord Voldemort's (Ralph Fiennes') dark past.",7.6,46
+104,105,Home Alone,PG,(1990),103 min,"
+    An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.",7.6,122
+105,106,The Hobbit: An Unexpected Journey,PG-13,(2012),169 min,"
+    A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.",7.8,105
+106,107,About Time,R,(I) (2013),123 min,"
+    At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think.",7.8,79
+107,108,Shutter Island,R,(2010),138 min,"
+    In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",8.2,81
+108,109,"Three Billboards Outside Ebbing, Missouri",R,(2017),115 min,"
+    A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.",8.2,98
+109,110,Green Book,PG-13,(2018),130 min,"
+    A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South.",8.2,95
+110,111,Braveheart,R,(1995),178 min,"
+    Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",8.3,6
+111,112,Whiplash,R,(2014),106 min,"
+    A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",8.5,96
+112,113,Die Hard,R,(1988),132 min,"
+    An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.",8.2,63
+113,114,Love Actually,R,(2003),135 min,"
+    Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.",7.6,79
+114,115,Blade Runner,R,(1982),117 min,"
+    A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.",8.1,104
+115,116,Pirates of the Caribbean: The Curse of the Black Pearl,PG-13,(2003),143 min,"
+    Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.",8.0,10
+116,117,Good Will Hunting,R,(1997),126 min,"
+    Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.",8.3,8
+117,118,V for Vendetta,R,(2005),132 min,"
+    In a future British tyranny, a shadowy freedom fighter, known only by the alias of ""V"", plots to overthrow it with the help of a young woman.",8.2,58
+118,119,The Help,PG-13,(2011),146 min,"
+    An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.",8.0,99
+119,120,Portrait of a Lady on Fire,R,(2019),122 min,"
+    On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",8.1,3
+120,121,A Clockwork Orange,R,(1971),136 min,"
+    In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.",8.3,21
+121,122,Star Wars: Episode IV - A New Hope,PG,(1977),121 min,"
+    Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",8.6,52
+122,123,Citizen Kane,PG,(1941),119 min,"
+    Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance; 'Rosebud'.",8.3,41
+123,124,Saving Private Ryan,R,(1998),169 min,"
+    Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",8.6,101
+124,125,Donnie Darko,R,(2001),113 min,"
+    After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.",8.0,92
+125,126,Iron Man,PG-13,(2008),126 min,"
+    After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",7.9,27
+126,127,Scarface,R,(1983),170 min,"
+    In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.",8.3,75
+127,128,A Star Is Born,R,(2018),136 min,"
+    A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",7.7,107
+128,129,The Terminator,R,(1984),107 min,"
+    A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.",8.0,59
+129,130,Logan,R,(2017),137 min,"
+    In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.",8.1,67
+130,131,Back to the Future Part II,PG,(1989),108 min,"
+    After visiting 2015, Marty McFly must repeat his visit to 1955 to prevent disastrous changes to 1985...without interfering with his first trip.",7.8,115
+131,132,Saw,R,(2004),103 min,"
+    Two strangers awaken in a room with no recollection of how they got there, and soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.",7.6,33
+132,133,Singin' in the Rain,G,(1952),103 min,"
+    A silent film production company and cast make a difficult transition to sound.",8.3,43
+133,134,The Usual Suspects,R,(1995),106 min,"
+    A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",8.5,113
+134,135,Almost Famous,R,(2000),122 min,"
+    A high-school boy is given the chance to write a story for Rolling Stone Magazine about an up-and-coming rock band as he accompanies them on their concert tour.",7.9,28
+135,136,Boogie Nights,R,(1997),155 min,"
+    Back when sex was safe, pleasure was a business and business was booming, an idealistic porn producer aspires to elevate his craft to an art when he discovers a hot young talent.",7.9,55
+136,137,Harry Potter and the Deathly Hallows: Part 1,PG-13,(2010),146 min,"
+    As Harry (Daniel Radcliffe), Ron (Rupert Grint), and Hermione (Emma Watson) race against time and evil to destroy the Horcruxes, they uncover the existence of the three most powerful objects in the wizarding world: the Deathly Hallows.",7.7,46
+137,138,Hacksaw Ridge,R,(2016),139 min,"
+    World War II American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people, and becomes the first man in American history to receive the Medal of Honor without firing a shot.",8.1,6
+138,139,The Others,PG-13,(2001),104 min,"
+    A woman who lives in her darkened old family house with her two photosensitive children becomes convinced that the home is haunted.",7.6,80
+139,140,Her,R,(2013),126 min,"
+    In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",8.0,111
+140,141,Moana,PG,(I) (2016),107 min,"
+    In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.",7.6,14
+141,142,Eternal Sunshine of the Spotless Mind,R,(2004),108 min,"
+    When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.",8.3,117
+142,143,Captain Fantastic,R,(2016),118 min,"
+    In the forests of the Pacific Northwest, a father devoted to raising his six kids with a rigorous physical and intellectual education is forced to leave his paradise and enter the world, challenging his idea of what it means to be a parent.",7.9,90
+143,144,What We Do in the Shadows,R,(2014),86 min,"
+    Viago, Deacon and Vladislav are vampires who are finding that modern life has them struggling with the mundane - like paying rent, keeping up with the chore wheel, trying to get into nightclubs and overcoming flatmate conflicts.",7.7,56
+144,145,Dallas Buyers Club,R,(2013),117 min,"
+    In 1985 Dallas, electrician and hustler Ron Woodroof works around the system to help AIDS patients get the medication they need after he is diagnosed with the disease.",8.0,110
+145,146,The Big Short,R,(2015),130 min,"
+    In 2006-2007 a group of investors bet against the US mortgage market. In their research they discover how flawed and corrupt the market is.",7.8,108
+146,147,The Notebook,PG-13,(2004),123 min,"
+    A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.",7.8,112
+147,148,300,R,(2006),117 min,"
+    King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",7.6,89
+148,149,The Lord of the Rings: The Two Towers,PG-13,(2002),179 min,"
+    While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",8.7,105
+149,150,Room,R,(I) (2015),118 min,"
+    Held captive for 7 years in an enclosed space, a woman and her young son finally gain their freedom, allowing the boy to experience the outside world for the first time.",8.1,25
+150,151,The Grand Budapest Hotel,R,(2014),99 min,"
+    A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",8.1,100
+151,152,Star Trek,PG-13,(2009),127 min,"
+    The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.",7.9,116
+152,153,Skyfall,PG-13,(2012),143 min,"
+    James Bond's loyalty to M is tested when her past comes back to haunt her. When MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.",7.7,5
+153,154,Spirited Away,PG,(2001),125 min,"
+    During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",8.6,38
+154,155,Guardians of the Galaxy Vol. 2,PG-13,(2017),136 min,"
+    The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",7.6,66
+155,156,Memento,R,(2000),113 min,"
+    A man with short-term memory loss attempts to track down his wife's murderer.",8.4,76
+156,157,The Avengers,PG-13,(2012),143 min,"
+    Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",8.0,64
+157,158,Heat,R,(1995),170 min,"
+    A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist.",8.2,32
+158,159,Hot Fuzz,R,(2007),121 min,"
+    A skilled London police officer is transferred to a small town with a dark secret.",7.8,68
+159,160,Full Metal Jacket,R,(1987),116 min,"
+    A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.",8.3,21
+160,161,Hidden Figures,PG,(2016),127 min,"
+    The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.",7.8,65
+161,162,Bohemian Rhapsody,PG-13,(2018),134 min,"
+    The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).",8.0,113
+162,163,28 Days Later...,R,(2002),113 min,"
+    Four weeks after a mysterious, incurable virus spreads throughout the UK, a handful of survivors try to find sanctuary.",7.6,34
+163,164,The Lion King,G,(1994),88 min,"
+    Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",8.5,57
+164,165,The Theory of Everything,PG-13,(2014),123 min,"
+    A look at the relationship between the famous physicist Stephen Hawking and his wife.",7.7,62
+165,166,The Girl with the Dragon Tattoo,R,(2011),158 min,"
+    Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for forty years by Lisbeth Salander, a young computer hacker.",7.8,49
+166,167,The Godfather: Part II,R,(1974),202 min,"
+    The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",9.0,109
+167,168,Terminator 2: Judgment Day,R,(1991),137 min,"
+    A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",8.5,59
+168,169,Mulholland Drive,R,(2001),147 min,"
+    After a car wreck on the winding Mulholland Drive renders a woman amnesiac, she and a perky Hollywood-hopeful search for clues and answers across Los Angeles in a twisting venture beyond dreams and reality.",8.0,61
+169,170,Lost in Translation,R,(2003),102 min,"
+    A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo.",7.7,37
+170,171,Pan's Labyrinth,R,(2006),118 min,"
+    In the Falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",8.2,72
+171,172,The Wizard of Oz,PG,(1939),102 min,"
+    Dorothy Gale is swept away from a farm in Kansas to a magical land of Oz in a tornado and embarks on a quest with her new friends to see the Wizard who can help her return home to Kansas and help her friends as well.",8.0,114
+172,173,Shaun of the Dead,R,(2004),99 min,"
+    A man's uneventful life is disrupted by the zombie apocalypse.",7.9,68
+173,174,Snatch,R,(2000),102 min,"
+    Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",8.3,47
+174,175,12 Angry Men,Approved,(1957),96 min,"
+    A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",8.9,29
+175,176,The Fly,R,(1986),96 min,"
+    A brilliant but eccentric scientist begins to transform into a giant man/fly hybrid after one of his experiments goes horribly wrong.",7.6,18
+176,177,Catch Me If You Can,PG-13,(2002),141 min,"
+    A seasoned FBI agent pursues Frank Abagnale Jr. who, before his 19th birthday, successfully forged millions of dollars' worth of checks while posing as a Pan Am pilot, a doctor, and a legal prosecutor.",8.1,101
+177,178,Moonrise Kingdom,PG-13,(2012),94 min,"
+    A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.",7.8,100
+178,179,The Martian,PG-13,(2015),144 min,"
+    An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.",8.0,104
+179,180,Manchester by the Sea,R,(2016),137 min,"
+    A depressed uncle is asked to take care of his teenage nephew after the boy's father dies.",7.8,106
+180,181,The Hateful Eight,R,(2015),168 min,"
+    In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.",7.8,19
+181,182,La La Land,PG-13,(2016),128 min,"
+    While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",8.0,96
+182,183,Stand by Me,R,(1986),89 min,"
+    After the death of one of his friends, a writer recounts a childhood journey with his friends to find the body of a missing boy.",8.1,78
+183,184,A Few Good Men,R,(1992),138 min,"
+    Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.",7.7,78
+184,185,Arrival,PG-13,(II) (2016),116 min,"
+    A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecrafts appear around the world.",7.9,36
+185,186,Marriage Story,R,(2019),137 min,"
+    Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.",8.0,40
+186,187,The Revenant,R,(2015),156 min,"
+    A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",8.0,85
+187,188,Kingsman: The Secret Service,R,(2014),129 min,"
+    A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.",7.7,4
+188,189,Rogue One: A Star Wars Story,PG-13,(2016),133 min,"
+    The daughter of an Imperial scientist joins the Rebel Alliance in a risky move to steal the plans for the Death Star.",7.8,17
+189,190,Wonder,PG,(I) (2017),113 min,"
+    Based on the New York Times bestseller, this movie tells the incredibly inspiring and heartwarming story of August Pullman, a boy with facial differences who enters the fifth grade, attending a mainstream elementary school for the first time.",8.0,12
+190,191,A Beautiful Mind,PG-13,(2001),135 min,"
+    After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.",8.2,23
+191,192,Kick-Ass,R,(2010),117 min,"
+    Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a superhero, even though he has no powers, training or meaningful reason to do so.",7.6,4
+192,193,Stardust,PG-13,(2007),127 min,"
+    In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.",7.6,4
+193,194,There Will Be Blood,R,(2007),158 min,"
+    A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.",8.2,55
+194,195,Scent of a Woman,R,(1992),156 min,"
+    A prep school student needing money agrees to ""babysit"" a blind man, but the job is not at all what he anticipated.",8.0,20
+195,196,2001: A Space Odyssey,G,(1968),149 min,"
+    After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.",8.3,21
+196,197,Black Swan,R,(2010),108 min,"
+    A committed dancer struggles to maintain her sanity after winning the lead role in a production of Tchaikovsky's ""Swan Lake"".",8.0,69
+197,198,Hunt for the Wilderpeople,PG-13,(2016),101 min,"
+    A national manhunt is ordered for a rebellious kid and his foster uncle who go missing in the wild New Zealand bush.",7.9,53
+198,199,Toy Story 4,G,(2019),100 min,"
+    When a new toy called ""Forky"" joins Woody and the gang, a road trip alongside old and new friends reveals how big the world can be for a toy.",7.8,82
+199,200,The Hobbit: The Desolation of Smaug,PG-13,(2013),161 min,"
+    The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.",7.8,105
