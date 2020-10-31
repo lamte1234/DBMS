@@ -6,11 +6,11 @@
 </head>
 <body>
     {% for x in result %}
-    <img src="{{ url_for('static', filename=x[9]) }}">
+    <img src="{{ url_for('static', filename=x.poster_url) }}">
     <p>
-        {{x[3]}}
-        {{x[5]}}
-        {{x[7]}}
+        {{x.title}}
+        {{x.certificate}}
+        {{x.length}}
     </p>
     {% endfor %}
 </body>

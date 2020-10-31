@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, sessions
 from form import SearchForm
 import mysql.connector
 from movie import Movie
@@ -14,7 +14,6 @@ mydb = mysql.connector.connect(
 )
 cursor = mydb.cursor()
 
-search_result = []
 
 @web.route('/', methods=['GET', 'POST'])
 def home():
@@ -55,20 +54,26 @@ def home():
             film_ids = film_ids1.intersection(film_ids2.intersection((film_ids3)))
         else:
             film_ids = film_ids1.intersection(film_ids2).union(film_ids1.intersection(film_ids3)).union(film_ids2.intersection(film_ids3))
-        film_objects = []
         retrieve_info = 'select * from film where film_id = %s'
+        id_info = []
         for x in film_ids:
             cursor.execute(retrieve_info, (x,))
             movie_info = cursor.fetchone()
-            film_objects += [Movie(movie_info[0], movie_info[1], movie_info[2], movie_info[4], movie_info[7]).serialize()]
-        return redirect(url_for('show_search', search_result=film_objects))
-        # return render_template('search.html', result=film_objects)
+            id_info += [movie_info[0]]
+        return redirect(url_for('show_search', id_info=id_info))
     return render_template('home.html', form=form)
 
-@web.route('/search.html')
+@web.route('/search')
 def show_search():
-    # return request.args.get('search_result', 1)
-    return request.args.getlist('search_result')[0]
+    film_ids = request.args.getlist('id_info')
+    film_objects = []
+    retrieve_info = 'select * from film where film_id = %s'
+    for x in film_ids:
+        cursor.execute(retrieve_info, (x,))
+        movie_info = cursor.fetchone()
+        film_objects += [Movie(movie_info[0], movie_info[1], movie_info[2], movie_info[4], movie_info[7])]
+    search_result = film_objects
+    return render_template('search.html', result=search_result)
 
 # def choose_movie():
 #     film_id = 2

@@ -15,5 +15,3 @@ class Movie():
                     'poster_url': self.poster_url
         }
 
-test = Movie(1,'The Trial of the Chicago 7','R','129 min','The story of 7 peopl').serialize()
-print(type(test))
