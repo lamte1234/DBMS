@@ -61,13 +61,14 @@ def home():
             cursor.execute(retrieve_info, (x,))
             movie_info = cursor.fetchone()
             film_objects += [Movie(movie_info[0], movie_info[1], movie_info[2], movie_info[4], movie_info[7]).serialize()]
-        # return redirect(url_for('show_search', search_result=film_objects))
-        return render_template('search.html', result=film_objects)
+        return redirect(url_for('show_search', search_result=film_objects))
+        # return render_template('search.html', result=film_objects)
     return render_template('home.html', form=form)
 
 @web.route('/search.html')
 def show_search():
-    return render_template('search.html', result=request.args.get('search_result'))
+    # return request.args.get('search_result', 1)
+    return request.args.getlist('search_result')[0]
 
 # def choose_movie():
 #     film_id = 2

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>
+        Search
+    </h2>
+    <form action="" method="post">
+        <p>
+            {{form.title.label}} <br>
+            {{form.title(size=50)}}
+        </p>
+        <p>
+            {{form.year.label}} <br>
+            {{form.year(size=50)}}
+        </p>
+        <p>
+            {{form.director.label}} <br>
+            {{form.director(size=50)}}
+        </p>
+        <p>
+            {{form.submit()}}
+        </p>
+    </form>
+</body>
+</html>
