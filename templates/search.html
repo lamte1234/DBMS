@@ -5,13 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-    {% for x in result %}
-    <img src="{{ url_for('static', filename=x.poster_url) }}">
-    <p>
-        {{x.title}}
-        {{x.certificate}}
-        {{x.length}}
-    </p>
-    {% endfor %}
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <div class="movie_elements">
+        {% for x in result %}
+        <div class="movie">
+        <img src="{{ url_for('static', filename=x.poster_url) }}">
+        <p>
+            <a href="/movie/{{x.film_id}}">{{x.title}}</a>
+            {{x.certificate}}
+            {{x.length}}
+        </p>
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

@@ -6,12 +6,14 @@ class Movie():
         self.length = length
         self.poster_url = poster_url
 
+
     def serialize(self):
         return {
-                    'film_id': self.film_id,
-                    'title': self.title,
-                    'certificate': self.certificate,
-                    'length': self.length,
-                    'poster_url': self.poster_url
+                    "film_id": self.film_id,
+                    "title": self.title,
+                    "certificate": self.certificate,
+                    "length": self.length,
+                    "poster_url": self.poster_url,
+
         }
 
