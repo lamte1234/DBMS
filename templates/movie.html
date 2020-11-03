@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{%block title %} {{ title }} {% endblock %}
+
+{% block container %}
     <div id="container">
         <h2>
-            {{title}}
+            {{ title }}
         </h2>
         <p>
-            {{description}}
+            {{ description }}
         </p>
         <img src="{{ url_for('static', filename=poster_url) }}">
         <video width="500" height="auto" controls>
             <source src="{{ url_for('static', filename=trailer_url) }}">
         </video>
     </div>
-</body>
-</html>
+{% endblock %}

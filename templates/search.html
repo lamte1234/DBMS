@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{%block title %}Search result{% endblock %}
+
+{% block container %}
     <nav>
         <a href="/">Home</a>
     </nav>
     <div class="movie_elements">
         {% for x in result %}
         <div class="movie">
-        <img src="{{ url_for('static', filename=x.poster_url) }}">
+        <img src="{{ url_for('static', filename=x.poster_url) }}" >
         <p>
             <a href="/movie/{{x.film_id}}">{{x.title}}</a>
             {{x.certificate}}
@@ -20,5 +18,4 @@
         </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}
