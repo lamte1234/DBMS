@@ -11,21 +11,21 @@ class SearchForm(FlaskForm):
 
 
 class LoginSignupForm(FlaskForm):
-    login = SubmitField("Login")
+    login = SubmitField("Log In")
     signup = SubmitField("Sign Up")
 
 
 class LoginForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
-    submit = SubmitField("Login")
+    submit = SubmitField("Log In")
 
 
 class SignUpForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired()])
-    submit = SubmitField("Sign up")
+    submit = SubmitField("Sign Up")
 
 
 

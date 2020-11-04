@@ -15,6 +15,9 @@
         <div id="welcome">
             Welcome, {{ username }}
         </div>
+        <div id="log_out">
+            <a href="{{ url_for('log_out') }}">Log out</a>
+        </div>
         {% block user_things %}
             //some user things
         {% endblock %}

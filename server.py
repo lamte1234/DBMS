@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, sessions
+from flask import Flask, render_template, request, redirect, url_for, session
 from form import SearchForm, LoginSignupForm, LoginForm, SignUpForm
 import mysql.connector
 from movie import Movie
@@ -14,7 +14,7 @@ mydb = mysql.connector.connect(
 )
 cursor = mydb.cursor()
 
-
+# -------------------------HOME PAGE-------------------------
 @web.route("/", methods=["GET", "POST"])
 def home():
     search_form = SearchForm()
@@ -68,11 +68,12 @@ def home():
         id_info = list(film_ids)
         return redirect(url_for("show_search", id_info=id_info))
     return render_template("home.html", search_form=search_form, login_signup_form=login_signup_form, username=username)
-
-
+# ---------------------------LOG IN--------------------------------
 @web.route("/login", methods=["GET", "POST"])
 def login():
     login_form = LoginForm()
+    check_sign_up = request.args.get("check_sign_up")
+
     if login_form.is_submitted():
         result = request.form
 
@@ -83,13 +84,14 @@ def login():
         cursor.execute(retrieve_user_info, (username,))
         user_info = cursor.fetchone()
         if user_info and username == user_info[0] and password == user_info[1]:
+            session["username"] = username #may be can use for refactoring
+            session["logged_in"] = True
             return redirect(url_for("home", username=username))
         else:
             error = "Wrong Username or Password"
             return render_template("login.html", login_form=login_form, error=error)
     return render_template("login.html", login_form=login_form)
-
-
+# ------------------SIGN UP---------------------------------
 @web.route("/signup", methods=["GET", "POST"])
 def signup():
     signup_form = SignUpForm()
@@ -121,8 +123,13 @@ def signup():
                 mydb.commit()
                 return redirect("login")
     return render_template("signup.html", signup_form=signup_form)
-
-
+# -------------------LOG OUT-------------------------------------
+@web.route("/logout")
+def log_out():
+    session.pop("logged_in", None)
+    session.pop("username", None)
+    return redirect(url_for("home"))
+# ----------SEARCH RESULT------------------------------------------------
 @web.route("/search", methods=["GET", "POST"])
 def show_search():
     film_ids = request.args.getlist("id_info")
@@ -141,7 +148,7 @@ def show_search():
 #     film_id = request.args.get("film_id")
 #     return redirect(url_for(movie_show, film_id=film_id))
 
-
+# ----------------------MOVIE PAGE--------------------------------
 @web.route("/movie/<film_id>")
 def movie_show(film_id):
     select_movie = "select * from film where film_id = %s"
