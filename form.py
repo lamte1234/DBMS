@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField, PasswordField
+from wtforms import StringField, SubmitField, IntegerField, PasswordField, TextAreaField
 from wtforms.validators import DataRequired, EqualTo, Length
 
 
@@ -27,5 +27,9 @@ class SignUpForm(FlaskForm):
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired()])
     submit = SubmitField("Sign Up")
 
+
+class UserRating(FlaskForm):
+    rating = TextAreaField("Leave your reviews and rates here!")
+    submit = SubmitField("Send")
 
 

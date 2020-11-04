@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from form import SearchForm, LoginSignupForm, LoginForm, SignUpForm
+from form import SearchForm, LoginSignupForm, LoginForm, SignUpForm, UserRating
 import mysql.connector
 from movie import Movie
 
@@ -19,7 +19,10 @@ cursor = mydb.cursor()
 def home():
     search_form = SearchForm()
     login_signup_form = LoginSignupForm()
-    username = request.args.get("username")
+    if not session.get("username") is None:
+        username = session["username"]
+    else:
+        username = None
 
     film_ids1 = set()
     film_ids2 = set()
@@ -86,7 +89,7 @@ def login():
         if user_info and username == user_info[0] and password == user_info[1]:
             session["username"] = username #may be can use for refactoring
             session["logged_in"] = True
-            return redirect(url_for("home", username=username))
+            return redirect(url_for("home"))
         else:
             error = "Wrong Username or Password"
             return render_template("login.html", login_form=login_form, error=error)
@@ -149,7 +152,7 @@ def show_search():
 #     return redirect(url_for(movie_show, film_id=film_id))
 
 # ----------------------MOVIE PAGE--------------------------------
-@web.route("/movie/<film_id>")
+@web.route("/movie/<film_id>", methods=["GET", "POST"])
 def movie_show(film_id):
     select_movie = "select * from film where film_id = %s"
     cursor.execute(select_movie, (film_id,))
@@ -159,7 +162,18 @@ def movie_show(film_id):
     description = result[5]
     poster_url = result[7]
     trailer_url = result[8]
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url = trailer_url)
+
+    if not session.get("logged_in") is None:
+        user_rating_form = UserRating()
+        if user_rating_form.is_submitted():
+            rating = request.form
+            user_rating = rating.get("rating")
+            import_sql = "insert into user_rating (username, film_id, rating) values (%s, %s, %s)"
+            val = (session["username"], film_id, user_rating)
+            cursor.execute(import_sql, val)
+            mydb.commit()
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, user_rating_form=user_rating_form)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url)
 
 
 if __name__ == "__main__":

@@ -14,5 +14,19 @@
         <video width="500" height="auto" controls>
             <source src="{{ url_for('static', filename=trailer_url) }}">
         </video>
+        {% if user_rating_form %}
+        <div id="user_rate">
+            <form id="review" method="POST">
+                <div>
+                    {{ user_rating_form.rating.label }} <br>
+                    {{ user_rating_form.rating(size=50) }}
+                    <span>
+                       {{ user_rating_form.submit() }}
+                    </span>
+                </div>
+
+            </form>
+        </div>
+        {% endif %}
     </div>
 {% endblock %}
