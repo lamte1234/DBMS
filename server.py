@@ -75,17 +75,18 @@ def login():
     login_form = LoginForm()
     if login_form.is_submitted():
         result = request.form
+
         username = result.get("username")
         password = result.get("password")
-        if not username == "" and not password == "":
-            retrieve_user_info = "select * from user where username = %s"
-            cursor.execute(retrieve_user_info, (username,))
-            user_info = cursor.fetchone()
-            if user_info and username == user_info[0] and password == user_info[0]:
-                return redirect(url_for("home", username=username))
-            else:
-                error = "Wrong Username or Password"
-                return render_template("login.html", login_form=login_form, error=error)
+
+        retrieve_user_info = "select * from user where username = %s"
+        cursor.execute(retrieve_user_info, (username,))
+        user_info = cursor.fetchone()
+        if user_info and username == user_info[0] and password == user_info[1]:
+            return redirect(url_for("home", username=username))
+        else:
+            error = "Wrong Username or Password"
+            return render_template("login.html", login_form=login_form, error=error)
     return render_template("login.html", login_form=login_form)
 
 
@@ -95,23 +96,30 @@ def signup():
 
     if signup_form.is_submitted():
         result = request.form
+
         username = result.get("username")
         password = result.get("password")
-        if not username == "" and not password == "":
-            find_existing_user = "select * from user where username = %s"
-            cursor.execute(find_existing_user, (username,))
-            existing_user = cursor.fetchone()
-            if existing_user:
-                existing_user_error = "Existed username"
-                return render_template("signup.html", signup_form=signup_form, error=existing_user_error)
+        cf_password = result.get("confirm_password")
+
+        find_existing_user = "select * from user where username = %s"
+        cursor.execute(find_existing_user, (username,))
+        existing_user = cursor.fetchone()
+
+        if existing_user:
+            existing_user_error = "Existed username"
+            return render_template("signup.html", signup_form=signup_form, error=existing_user_error)
+        else:
+            if len(password) < 6:
+                password_error = "Password must have at least 6 characters"
+                return render_template("signup.html", signup_form=signup_form, error=password_error)
+            elif password != cf_password:
+                cf_error = "Passwords must match"
+                return render_template("signup.html", signup_form=signup_form, error=cf_error)
             else:
                 insert_user = "insert into user (username, password) values (%s, %s)"
                 cursor.execute(insert_user, (username, password))
                 mydb.commit()
-                return redirect(url_for("home", username=username))
-        else:
-            missing_value_error = "Missing Username or Password"
-            return render_template("signup.html", signup_form=signup_form, error=missing_value_error)
+                return redirect("login")
     return render_template("signup.html", signup_form=signup_form)
 
 

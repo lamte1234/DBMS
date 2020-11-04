@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, PasswordField
+from wtforms.validators import DataRequired, EqualTo, Length
 
 
 class SearchForm(FlaskForm):
@@ -15,15 +16,15 @@ class LoginSignupForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
-    username = StringField("Username")
-    password = PasswordField("Password")
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
 
 class SignUpForm(FlaskForm):
-    username = StringField("Username")
-    password = PasswordField("Password")
-    confirm_password = PasswordField("Confirm Password")
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    confirm_password = PasswordField("Confirm Password", validators=[DataRequired()])
     submit = SubmitField("Sign up")
 
 
