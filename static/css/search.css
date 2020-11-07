@@ -115,7 +115,7 @@ header .user{
     background:#1f2833;
     padding-bottom:10px
 }
-#footer>div {
+#footer #search {
     display:block;
     position:relative;
     width:70%;margin:auto;
