@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField, PasswordField, TextField
+from wtforms import StringField, SubmitField, IntegerField, PasswordField, TextField, FloatField
 from wtforms.validators import DataRequired, EqualTo, Length
 
 
@@ -31,5 +31,16 @@ class SignUpForm(FlaskForm):
 class UserRating(FlaskForm):
     rating = TextField("Review")
     submit = SubmitField("Share")
+
+
+class AdminInputForm(FlaskForm):
+    title = StringField("Title", validators=[DataRequired()])
+    certificate = StringField("Certificate", validators=[DataRequired()])
+    year = StringField("Release Year", validators=[DataRequired()])
+    length = StringField("Length", validators=[DataRequired()])
+    description = TextField("Description", validators=[DataRequired()])
+    rating = FloatField("Rating", validators=[DataRequired()])
+    director = StringField("Director", validators=[DataRequired()])
+    stars = TextField("Stars", validators=[DataRequired()])
 
 

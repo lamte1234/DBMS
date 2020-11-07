@@ -87,7 +87,7 @@ def login():
         cursor.execute(retrieve_user_info, (username,))
         user_info = cursor.fetchone()
         if user_info and username == user_info[0] and password == user_info[1]:
-            session["username"] = username #may be can use for refactoring
+            session["username"] = username
             session["logged_in"] = True
             return redirect(url_for("home"))
         else:
@@ -156,40 +156,13 @@ def show_search():
     return render_template("search.html", result=search_result, cnt=len(search_result), login_signup_form=login_signup_form, username=username)
 
 
-# def choose_movie():
-
-#     film_id = request.args.get("film_id")
-#     return redirect(url_for(movie_show, film_id=film_id))
-
 # ----------------------MOVIE PAGE--------------------------------
 @web.route("/movie/<film_id>", methods=["GET", "POST"])
 def movie_show(film_id):
-    login_signup_form = LoginSignupForm()
-    if not session.get("username") is None:
-        username = session["username"]
-    else:
-        username = None
-    if login_signup_form.is_submitted():
-        if login_signup_form.login.data:
-            return redirect("login")
-        if login_signup_form.signup.data:
-            return redirect("signup")
     select_movie = "select * from film where film_id = %s"
     cursor.execute(select_movie, (film_id,))
     result = cursor.fetchone()
 
-
-    # select_movie_2 = "select * from genre where film_id = %s"
-    # cursor.execute(select_movie_2, (film_id,))
-    # result_2 = cursor.fetchone()
-
-    # film_stars = []
-    # search_star = "select * from star JOIN film_star ON film_star.star_id=star.star_id WHERE film_star.film_id = %s"
-    # for x in film_ids:
-    #     cursor.execute(search_star, (x,))
-    #     movie_info = cursor.fetchone()
-    #     film_stars += [Star(movie_info[2])]
-    # result_3 = film_stars
 
     # find director_id
     dir_id = result[9]
@@ -213,8 +186,6 @@ def movie_show(film_id):
 
     title = result[1]
     release_year = result[3]
-    # genre = result_2[2]
-    # star = result_3
     length = result[4]
     description = result[5]
     poster_url = result[7]
