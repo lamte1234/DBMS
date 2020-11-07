@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+body{
+    background: #2d3436;
+}
+li {
+    list-style-type:none;
+}
+.info ul {
+    padding-left: 10px;
+
+}
+header{
+    background:#1f2833;
+}
+header nav {
+    height: 75px;
+    line-height: 50px;
+    width:70%;
+    margin:auto;
+}
+
+body > nav {
+    background:#1f2833;
+}
+.number_search {
+    height: 50px;
+    line-height: 50px;
+    width:70%;
+    margin:auto;
+    color:#bbb;
+    font-size: 24px
+}
+.movie_elements {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.movie {
+    position:relative;
+    display: inline-block;
+    width: 30.6%;
+    height: 500px;
+    margin: 1%;
+    border: 1px solid black;
+    background:#1f2833;
+    text-decoration: none;
+}
+
+#welcome{
+    display:inline;
+    margin-right:5px;
+    color:#bbb;
+}
+#log_out{
+    display: inline;
+    text-decoration:none;
+    color:#dec700
+}
+.movie:hover {
+    cursor: pointer;
+}
+header .user{
+    display:inline-block;
+    float:right;
+    margin-top:10px
+}
+.poster{
+    display:block;
+    position: absolute;
+    height:400px;
+}
+.movie_elements .movie .poster > img {
+    display:block;
+    width: 100%;
+    height:100%;
+}
+.info {
+    position:absolute;
+    bottom:0;
+    margin: 20px 0;
+}
+#login,#signup {
+        font-size: 0.75em;
+        width:70px;
+        height:30px;
+        border: #66FCF1 1px solid;
+        color: #66FCF1;
+        background: #2d3436;
+        cursor:pointer;
+        border-radius:5px
+}
+#login:hover,#signup:hover {
+        background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+        transition: .5s;
+}
+
+/* FOOTER */
+
+#footer{
+    display:block;
+    position:sticky;
+    top:100%;
+    background:#1f2833;
+    padding-bottom:10px
+}
+#footer>div {
+    display:block;
+    position:relative;
+    width:70%;margin:auto;
+    padding:20px
+}
+#address,#about_us {
+    display:inline-block;
+    width : 39%;
+}
+#contact {
+    display:inline-block;
+    padding-top: 10px;
+    width : 20%;
+}

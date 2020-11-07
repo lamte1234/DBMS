@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-
+header .user{
+            display:inline-block;
+            float:right;
+            margin-top:10px
+        }
 body{
     color: white;
     background-color: #2d3436;
@@ -98,4 +102,26 @@ input[type="submit"]:hover{
     background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
     transition: .5s;
 }
-
+header{
+            background:#1f2833;
+        }
+        header nav {
+            height: 75px;
+            line-height: 50px;
+            width:70%;
+            margin:auto;
+        }
+#login,#signup {
+        font-size: 0.75em;
+        width:70px;
+        height:30px;
+        border: #66FCF1 1px solid;
+        color: #66FCF1;
+        background: #2d3436;
+        cursor:pointer;
+        border-radius:5px
+}
+#login:hover,#signup:hover {
+        background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+        transition: .5s;
+}

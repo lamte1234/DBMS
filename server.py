@@ -233,8 +233,8 @@ def movie_show(film_id):
     #     return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, length=length, release_year=release_year, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
     # return render_template("movie.html", title=title, description=description, poster_url=poster_url, length=length, release_year=release_year, trailer_url=trailer_url, login_signup_form=login_signup_form, username=username)
 
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form)
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result)
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, login_signup_form=login_signup_form, username=username)
 
 
 
