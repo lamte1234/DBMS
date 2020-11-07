@@ -1,21 +1,167 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+        }
+        body{
+            background: #2d3436;
+        }
+        li {
+            list-style-type:none;
+        }
+        .info ul {
+            padding-left: 10px;
 
-{%block title %}Search result{% endblock %}
+        }
+        header{
+            background:#1d3436;
+        }
+        header nav {
+            height: 75px;
+            line-height: 50px;
+            width:70%;
+            margin:auto;
+        }
 
-{% block container %}
+        body > nav {
+            background:#1d3436;
+        }
+        .number_search {
+            height: 50px;
+            line-height: 50px;
+            width:70%;
+            margin:auto;
+        }
+        .movie_elements {
+            position: relative;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .movie {
+            position:relative;
+            display: inline-block;
+            width: 30.6%;
+            height: 500px;
+            margin: 1%;
+            border: 1px solid black;
+            background:#1d3436;
+            text-decoration: none;
+        }
+        #welcome{color:#bbb;}
+        .movie:hover {
+            cursor: pointer;
+        }
+        header .user{
+            display:inline-block;
+            float:right;
+            margin-top:10px
+        }
+        .poster{
+            display:block;
+            position: absolute;
+            height:400px;
+        }
+        .movie_elements .movie .poster > img {
+            display:block;
+            width: 100%;
+            height:100%;
+        }
+        .info {
+            position:absolute;
+            bottom:0;
+            margin: 20px 0;
+        }
+        #login,#signup {width:70px;height:30px;color:black;cursor:pointer;border-radius:5px}
+        #login:hover,#signup:hover {background:#1d3436;color:#bbb}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="static/img/logo/logo.png">
+            </a>
+            <div class="user">
+                {% if not username %}
+                    <div class="login-signup-form">
+                        <form action="" method="post">
+                            <span>{{ login_signup_form.login }}</span>
+                            <span>{{ login_signup_form.signup }}</span>
+                        </form>
+                    </div>
+                {% endif %}
+                {% if username %}
+                    <div id="welcome" style="display:inline;margin-right:5px">
+                        Welcome, {{ username }}
+                    </div>
+                    <div id="log_out" style="display:inline">
+                        <a href="{{ url_for('log_out') }}" style="text-decoration:none;color:#dec700">Log out</a>
+                    </div>
+<!--                    {% block user_things %}-->
+<!--                        //some user things-->
+<!--                    {% endblock %}-->
+                {% endif %}
+        </nav>
+    </header>
+    <diV style="border: 1px solid yellow;">
+    </diV>
     <nav>
-        <a href="/">Home</a>
-    </nav>
-    <div class="movie_elements">
-        {% for x in result %}
-        <div class="movie">
-        <img src="{{ url_for('static', filename=x.poster_url) }}" >
-        <p>
-            <a href="/movie/{{x.film_id}}">{{x.title}}</a>
-            {{x.certificate}}
-            {{x.length}}
-        </p>
+        <div class="number_search">
+            <a style="color:#bbb; font-size: 24px">Số kết quả tìm kiếm : {{ cnt }} </a>
         </div>
-        {% endfor %}
+    </nav>
+    <diV style="border: 1px solid yellow;"></div>
+    <div class="movie_elements">
+            {% for x in result %}
+                <a  href="/movie/{{x.film_id}}" class="movie">
+                    <div class="poster">
+                        <img src="{{ url_for('static', filename=x.poster_url) }}">
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li><p class="film_title" style="color: #44e2ff;font-size: 16px;font-weight: 700; line-height:40px">{{x.title}}</p></li>
+                            <li><p class="film_length" style="color: #777;font-size: 12px;">{{x.length}}</p></li>
+                        </ul>
+                    </div>
+                </a>
+
+            {% endfor %}
+
+
     </div>
-{% endblock %}
+    <div id="footer" style="display:block;position:sticky;top:100%;background:#1d3436;padding-bottom:10px">
+        <diV style="border: 1px solid yellow;">
+        </diV>
+        <div style="display:block;position:relative;width:70%;margin:auto;padding:20px">
+            <div id="address" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Địa chỉ</h4>
+                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+            </div>
+            <div id="about_us" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Thành viên</h4>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+            </div>
+            <div id="contact" style="display:inline-block;width:20%">
+                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

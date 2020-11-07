@@ -1,50 +1,153 @@
 {% extends "base.html" %}
 
 {%block title %}Home{% endblock %}
+{%block style%}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+        }
+        body{
+            position:relative;
+            background: #2d3436;
+<!--            background-image: linear-gradient(315deg,#2d3436 0%, #000000 74%)-->
+        }
+        h2,h4, #welcome{color:#bbb;}
+        li {
+            list-style-type:none;
+        }
+        .info ul {
+            padding-left: 10px;
+
+        }
+        header{
+            background:#1d3436;
+        }
+        header nav {
+            height: 75px;
+            line-height: 50px;
+            width:70%;
+            margin:0 auto;
+        }
+        header .user{
+            display:inline-block;
+            float:right;
+            margin-top:10px
+        }
+        .search-form {
+            display:relative;
+            background:#1d3436 ;
+        }
+        .search-form form {
+            height:auto;
+            line-height: 50px;
+            width:70%;
+            margin:0 auto;
+        }
+        .search-form ul li{
+            display:inline-table;
+        }
+        #submit,#login,#signup {width:70px;height:30px;color:black;cursor:pointer;border-radius:5px}
+        #submit:hover,#login:hover,#signup:hover {background:#1d3436;color:#bbb}
+{% endblock %}
 
 {% block container %}
-    {% if not username %}
-        <div class="login-signup-form">
-            <form action="" method="post">
-                <span>{{ login_signup_form.login }}</span>
-                <span>{{ login_signup_form.signup }}</span>
-            </form>
-        </div>
-    {% endif %}
-    {% if username %}
-        <div id="welcome">
-            Welcome, {{ username }}
-        </div>
-        <div id="log_out">
-            <a href="{{ url_for('log_out') }}">Log out</a>
-        </div>
-        {% block user_things %}
-            //some user things
-        {% endblock %}
-    {% endif %}
-
-    <div class="search-form">
-        <h2>
-            Search
-        </h2>
-        <form action="" method="post">
-            <div class="form">
-                <div>
-                    {{search_form.title.label}} <br>
-                    {{search_form.title(size=50)}}
-                </div>
-                <div>
-                    {{search_form.year.label}} <br>
-                    {{search_form.year(size=50)}}
-                </div>
-                <div>
-                    {{search_form.director.label}} <br>
-                    {{search_form.director(size=50)}}
-                </div>
-                <div>
-                    {{search_form.submit()}}
-                </div>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="static/img/logo/logo.png">
+            </a>
+            <div class="user">
+                {% if not username %}
+                    <div class="login-signup-form">
+                        <form action="" method="post">
+                            <span><input id="login" name="login" type="submit" value="Log In"></span>
+                            <span><input id="signup" name="signup" type="submit" value="Sign Up"></span>
+                        </form>
+                    </div>
+                {% endif %}
+                {% if username %}
+                    <div id="welcome" style="display:inline;margin-right:5px">
+                        Welcome, {{ username }}
+                    </div>
+                    <div id="log_out" style="display:inline">
+                        <a href="{{ url_for('log_out') }}" style="text-decoration:none;color:#dec700">Log out</a>
+                    </div>
+<!--                    {% block user_things %}-->
+<!--                        //some user things-->
+<!--                    {% endblock %}-->
+                {% endif %}
             </div>
+        </nav>
+
+    </header>
+    <diV style="border: 1px solid yellow;">
+    </diV>
+    <div class="search-form">
+        <form action="" method="post" style="line-height:35px">
+            <h2 style="display:inline-block;">
+                Search
+            </h2>
+            <div style="display:inline-block;float:right">
+                <input id="submit" name="submit" type="submit" value="Search">
+            </div>
+            <ul style="line-height: 15px; padding-bottom:20px">
+                <li style="width:33%">
+                    <h4>Title</h4>
+                    <input id="title" name="title" style="width:100%;height:30px;border-radius:5px" type="text">
+                </li>
+                <li style="width:33%">
+                    <h4>Year</h4>
+                    <input id="year" name="year" style="width:100%;height:30px;border-radius:5px" type="text">
+                </li>
+                <li style="width:33%">
+                    <h4>Director</h4>
+                    <input id="director" name="director" style="width:100%;height:30px;border-radius:5px" type="text">
+                </li>
+            </ul>
         </form>
     </div>
+    <div style="border: 1px solid yellow;"></div>
+    <div style="height:30px"></div>
+    <div class="slide" style="width:70%;display:relative;margin:auto;height:auto" >
+        <img id="img" src="static/img/slide/1.jpeg" style="max-width:100%" onclick="changeImages()">
+    </div>
+    <div style="height:30px"></div>
+    <diV style="border: 1px solid yellow;">
+    </diV>
+    <div id="footer" style="display:block;position:sticky;top:100%;background:#1d3436;padding-bottom:10px">
+        <div style="display:block;position:relative;width:70%;margin:auto;padding:20px">
+            <div id="address" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Địa chỉ</h4>
+                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+            </div>
+            <div id="about_us" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Thành viên</h4>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+            </div>
+            <div id="contact" style="display:inline-block;width:20%">
+                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    var index=1;
+    changeImages = function(){
+        var imgs = ["static/img/slide/1.jpeg","static/img/slide/2.jpeg","static/img/slide/3.jpeg"];
+        document.getElementById("img").src = imgs[index];
+        index++;
+        if (index==3){index=0}
+    }
+    setInterval(changeImages,3000);
 {% endblock %}

@@ -135,6 +135,16 @@ def log_out():
 # ----------SEARCH RESULT------------------------------------------------
 @web.route("/search", methods=["GET", "POST"])
 def show_search():
+    login_signup_form = LoginSignupForm()
+    if not session.get("username") is None:
+        username = session["username"]
+    else:
+        username = None
+    if login_signup_form.is_submitted():
+        if login_signup_form.login.data:
+            return redirect("login")
+        if login_signup_form.signup.data:
+            return redirect("signup")
     film_ids = request.args.getlist("id_info")
     film_objects = []
     retrieve_info = "select * from film where film_id = %s"
@@ -143,7 +153,7 @@ def show_search():
         movie_info = cursor.fetchone()
         film_objects += [Movie(movie_info[0], movie_info[1], movie_info[2], movie_info[4], movie_info[7])]
     search_result = film_objects
-    return render_template("search.html", result=search_result)
+    return render_template("search.html", result=search_result, cnt=len(search_result), login_signup_form=login_signup_form, username=username)
 
 
 # def choose_movie():
@@ -154,11 +164,37 @@ def show_search():
 # ----------------------MOVIE PAGE--------------------------------
 @web.route("/movie/<film_id>", methods=["GET", "POST"])
 def movie_show(film_id):
+    login_signup_form = LoginSignupForm()
+    if not session.get("username") is None:
+        username = session["username"]
+    else:
+        username = None
+    if login_signup_form.is_submitted():
+        if login_signup_form.login.data:
+            return redirect("login")
+        if login_signup_form.signup.data:
+            return redirect("signup")
     select_movie = "select * from film where film_id = %s"
     cursor.execute(select_movie, (film_id,))
     result = cursor.fetchone()
 
+    # select_movie_2 = "select * from genre where film_id = %s"
+    # cursor.execute(select_movie_2, (film_id,))
+    # result_2 = cursor.fetchone()
+
+    # film_stars = []
+    # search_star = "select * from star JOIN film_star ON film_star.star_id=star.star_id WHERE film_star.film_id = %s"
+    # for x in film_ids:
+    #     cursor.execute(search_star, (x,))
+    #     movie_info = cursor.fetchone()
+    #     film_stars += [Star(movie_info[2])]
+    # result_3 = film_stars
+
     title = result[1]
+    release_year = result[3]
+    # genre = result_2[2]
+    # star = result_3
+    length = result[4]
     description = result[5]
     poster_url = result[7]
     trailer_url = result[8]
@@ -172,8 +208,8 @@ def movie_show(film_id):
             val = (session["username"], film_id, user_rating)
             cursor.execute(import_sql, val)
             mydb.commit()
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, user_rating_form=user_rating_form)
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url)
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, length=length, release_year=release_year, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, length=length, release_year=release_year, trailer_url=trailer_url, login_signup_form=login_signup_form, username=username)
 
 
 if __name__ == "__main__":

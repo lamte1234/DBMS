@@ -1,23 +1,90 @@
 {% extends "base.html" %}
 
 {%block title %}Login{% endblock %}
+{%block style%}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+        }
+        body{
+            background: #2d3436;
+        }
+        li {
+            list-style-type:none;
+        }
+        .info ul {
+            padding-left: 10px;
+
+        }
+        header{
+            background:#1d3436;
+        }
+        header nav {
+            height: 75px;
+            line-height: 50px;
+            width:70%;
+            margin:auto;
+        }
+        h3,h4{color:#bbb}
+        #submit {width:70px;height:30px;color:black;cursor:pointer;border-radius:5px}
+        #submit:hover {background:#1d3436;color:#bbb}
+{% endblock %}
 
 {% block container %}
-    <div class="container">
-        <h3 class="title">Log In</h3>
-        <form action="/login" method="POST">
-            <div class="username">
-                {{ login_form.username.label }} <br>
-                {{ login_form.username(size=50) }}
-            </div>
-            <div class="password">
-                {{ login_form.password.label }} <br>
-                {{ login_form.password(size=50) }}
-            </div>
-            <div class="submit">
-                {{ login_form.submit() }}
+    <header>
+        <nav>
+            <a href="/">
+                <img src="static/img/logo/logo.png">
+            </a>
+        </nav>
+    </header>
+    <diV style="border: 1px solid yellow;">
+    </diV>
+    <div style="height:100px"></div>
+    <div class="container" style="width:30%;margin:auto";>
+        <form action="/login" method="POST" style="line-height:10px;">
+
+            <h3 class="title" style="text-align:center"><a>Log In</a></h3><br>
+            <div class="username" style="line-height:20px;">
+                <h4 for="username" >Username</h4>
+                <input id="username" name="username" required style="width:100%;height:30px" type="text" value="">
+            </div><br>
+            <div class="password"style="line-height:20px;">
+                <h4 for="password">Password</h4>
+                <input id="password" name="password" required style="width:100%;height:30px" type="password" value="">
+            </div><br>
+            <div class="submit" style="text-align:center">
+                <input id="submit" name="submit" type="submit" value="Log In">
             </div>
         </form>
         {{ error }}
+    </div>
+    <div id="footer" style="display:block;position:sticky;top:100%;background:#1d3436;padding-bottom:10px">
+        <diV style="border: 1px solid yellow;">
+        </diV>
+        <div style="display:block;position:relative;width:70%;margin:auto;padding:20px">
+            <div id="address" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Địa chỉ</h4>
+                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+            </div>
+            <div id="about_us" style="display:inline-block;width:39%">
+                <h4 style="color:#dacb46">Thành viên</h4>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
+                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+            </div>
+            <div id="contact" style="display:inline-block;width:20%">
+                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
+                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+            </div>
+        </div>
     </div>
 {% endblock %}
