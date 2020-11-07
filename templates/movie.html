@@ -1,28 +1,43 @@
 {% extends "base.html" %}
 
-{%block title %} {{ title }} {% endblock %}
+{% block title %} {{ title }} {% endblock %}
+{% block link %} <link rel="stylesheet" href="{{ url_for('static', filename='css/movie.css') }}"> {% endblock %}
 
 {% block container %}
     <div id="container">
-        <h2>
-            {{ title }}
-        </h2>
-        <p>
-            {{ description }}
-        </p>
-        <img src="{{ url_for('static', filename=poster_url) }}">
-        <video width="500" height="auto" controls>
-            <source src="{{ url_for('static', filename=trailer_url) }}">
-        </video>
+        <div class="text-content">
+            <h2>
+                {{ title }}
+            </h2>
+            <p>
+                {{ description }}
+            </p>
+            <p id="director">
+                <span>Director: </span> {{ director[0] }}.
+            </p>
+            <p id="stars">
+                <span>Stars: </span>
+                {% for x in star_name_result %}
+                    {{ x }},
+                {% endfor %}...
+            </p>
+        </div>
+        <div class="poster">
+            <img src="{{ url_for('static', filename=poster_url) }}">
+        </div>
+        <div class="trailer">
+            <h2>TRAILER</h2>
+            <video width="500" height="auto" controls>
+                <source src="{{ url_for('static', filename=trailer_url) }}">
+            </video>
+        </div>
         {% if user_rating_form %}
         <div id="user_rate">
             <form id="review" method="POST">
                 <div>
-                    {{ user_rating_form.rating.label }} <br>
-                    {{ user_rating_form.rating(size=50) }}
-                    <span>
-                       {{ user_rating_form.submit() }}
-                    </span>
+                    <h2 id="review-hr">REVIEW</h2>
+                    {{ user_rating_form.rating(placeholder="Share your opinions") }}
+                    {{ user_rating_form.submit() }}
                 </div>
 
             </form>

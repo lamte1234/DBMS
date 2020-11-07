@@ -178,6 +178,7 @@ def movie_show(film_id):
     cursor.execute(select_movie, (film_id,))
     result = cursor.fetchone()
 
+
     # select_movie_2 = "select * from genre where film_id = %s"
     # cursor.execute(select_movie_2, (film_id,))
     # result_2 = cursor.fetchone()
@@ -189,6 +190,26 @@ def movie_show(film_id):
     #     movie_info = cursor.fetchone()
     #     film_stars += [Star(movie_info[2])]
     # result_3 = film_stars
+
+    # find director_id
+    dir_id = result[9]
+    select_dir = "select name from director where director_id = %s"
+    cursor.execute(select_dir, (dir_id,));
+    director = cursor.fetchone()
+
+    # find star_id
+    select_star = "select star_id from film_star where film_id = %s"
+    cursor.execute(select_star, (film_id,))
+    result_tuple = cursor.fetchall()
+    list_star_id = []
+    for rst in result_tuple:
+        list_star_id += [(rst[0],)]
+    select_star_name = "select name from star where star_id = %s"
+    star_name_result = []
+    for lsi in list_star_id:
+        cursor.execute(select_star_name, lsi)
+        star_name = cursor.fetchone()
+        star_name_result += [star_name[0]]
 
     title = result[1]
     release_year = result[3]
@@ -208,8 +229,13 @@ def movie_show(film_id):
             val = (session["username"], film_id, user_rating)
             cursor.execute(import_sql, val)
             mydb.commit()
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, length=length, release_year=release_year, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, length=length, release_year=release_year, trailer_url=trailer_url, login_signup_form=login_signup_form, username=username)
+
+    #     return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, length=length, release_year=release_year, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
+    # return render_template("movie.html", title=title, description=description, poster_url=poster_url, length=length, release_year=release_year, trailer_url=trailer_url, login_signup_form=login_signup_form, username=username)
+
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result)
+
 
 
 if __name__ == "__main__":
