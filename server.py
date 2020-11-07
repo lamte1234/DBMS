@@ -158,6 +158,26 @@ def movie_show(film_id):
     cursor.execute(select_movie, (film_id,))
     result = cursor.fetchone()
 
+    # find director_id
+    dir_id = result[9]
+    select_dir = "select name from director where director_id = %s"
+    cursor.execute(select_dir, (dir_id,));
+    director = cursor.fetchone()
+
+    # find star_id
+    select_star = "select star_id from film_star where film_id = %s"
+    cursor.execute(select_star, (film_id,))
+    result_tuple = cursor.fetchall()
+    list_star_id = []
+    for rst in result_tuple:
+        list_star_id += [(rst[0],)]
+    select_star_name = "select name from star where star_id = %s"
+    star_name_result = []
+    for lsi in list_star_id:
+        cursor.execute(select_star_name, lsi)
+        star_name = cursor.fetchone()
+        star_name_result += [star_name[0]]
+
     title = result[1]
     description = result[5]
     poster_url = result[7]
@@ -172,8 +192,8 @@ def movie_show(film_id):
             val = (session["username"], film_id, user_rating)
             cursor.execute(import_sql, val)
             mydb.commit()
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, user_rating_form=user_rating_form)
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url)
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result)
 
 
 if __name__ == "__main__":

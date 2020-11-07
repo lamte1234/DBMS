@@ -13,10 +13,13 @@
                 {{ description }}
             </p>
             <p id="director">
-                <span>Director: </span> Christopher Nolan
+                <span>Director: </span> {{ director[0] }}.
             </p>
             <p id="stars">
-                <span>Stars: </span> Lam1, Lamdeptrai, Lamcuto,...
+                <span>Stars: </span>
+                {% for x in star_name_result %}
+                    {{ x }},
+                {% endfor %}...
             </p>
         </div>
         <div class="poster">
@@ -33,7 +36,7 @@
             <form id="review" method="POST">
                 <div>
                     <h2 id="review-hr">REVIEW</h2>
-                    {{ user_rating_form.rating() }}
+                    {{ user_rating_form.rating(placeholder="Share your opinions") }}
                     {{ user_rating_form.submit() }}
                 </div>
 

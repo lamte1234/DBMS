@@ -81,13 +81,21 @@ input[type="text"]{
 }
 
 input[type="submit"]{
+    text-transform: uppercase;
     width: 150px;
     height: 50px;
-    border: none;
+    border: #66FCF1 2px solid;
+    color: #66FCF1;
     outline: none;
     cursor: pointer;
     font-size: 1.2em;
     font-weight: 300;
-    background: #66FCF1;
+    background: #2d3436;
+    margin-left: 3px;
+}
+
+input[type="submit"]:hover{
+    background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    transition: .5s;
 }
 
