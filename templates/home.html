@@ -2,11 +2,10 @@
 
 {%block title %}Home{% endblock %}
 {% block link %} <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"> {% endblock %}
-
 {% block container %}
     <header>
         <nav>
-            <a href="/">
+            <a href="/" id="logo">
                 <img src="static/img/logo/logo.png">
             </a>
             <div class="user">
@@ -23,30 +22,24 @@
                         Welcome, {{ username }}
                     </div>
                     <div id="log_out">
-                        <a href="{{ url_for('log_out') }}">Log out</a>
+                        <a href="{{ url_for('log_out') }}" id="btn-log-out">Log out</a>
                     </div>
-<!--                    {% block user_things %}-->
-<!--                        //some user things-->
-<!--                    {% endblock %}-->
                 {% endif %}
             </div>
         </nav>
-
     </header>
-    <diV style="border: 1px solid yellow;">
-    </diV>
     <div class="search-form">
         <form action="" method="post">
-            <h2 style="display:inline-block;">
+            <h2>
                 Search
             </h2>
-            <div class="search">
+            <span>
                 <input id="submit" name="submit" type="submit" value="Search">
-            </div>
+            </span>
             <ul>
                 <li>
                     <h4>Title</h4>
-                    <input id="title" name="title" type="text">
+                    <input id="title" name="title"  type="text">
                 </li>
                 <li>
                     <h4>Year</h4>
@@ -59,30 +52,25 @@
             </ul>
         </form>
     </div>
-    <div style="border: 1px solid yellow;"></div>
-    <div style="height:30px"></div>
     <div class="slide" >
-        <img id="img" src="static/img/slide/1.jpeg" style="max-width:100%" onclick="changeImages()">
+        <img id="img" src="static/img/slide/1.jpeg" onclick="changeImages()">
     </div>
-    <div style="height:30px"></div>
-
     <div id="footer">
-        <diV style="border: 1px solid yellow;"></diV>
-        <div id="search">
+        <div>
             <div id="address">
-                <h4 style="color:#dacb46">Địa chỉ</h4>
-                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
-                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+                <h4>ADDRESS</h4>
+                <a>Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a>144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
             </div>
             <div id="about_us">
-                <h4 style="color:#dacb46">Thành viên</h4>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+                <h4>ABOUT US</h4>
+                <a>Nguyễn Hoài Lâm - 18020748</a><br>
+                <a>Nguyễn Thành Đạt - 18020297</a>
             </div>
             <div id="contact">
-                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+                <h4>CONTACT</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-instagram-square"></i></a>
             </div>
         </div>
     </div>

@@ -1,59 +1,53 @@
 {% extends "base.html" %}
 
 {%block title %}Sign Up{% endblock %}
-
 {% block link %} <link rel="stylesheet" href="{{ url_for('static', filename='css/signin-up.css') }}"> {% endblock %}
-
 {% block container %}
     <header>
         <nav>
-            <a href="/">
+            <a href="/" id="logo">
                 <img src="static/img/logo/logo.png">
             </a>
         </nav>
     </header>
-    <diV style="border: 1px solid yellow;">
-    </diV>
-    <div style="height:100px"></div>
     <div class="container">
         <form action="/signup" method="POST">
-            <h3 class="title"><a>Sign up</a></h3><br>
+            <h3 class="title">SIGN UP</h3><br>
             <div class="username">
-                <h4>Username</h4>
-                <input id="username" name="username" required type="text" value="">
+                <h4 for="username">Username</h4>
+                <input id="username" name="username" required  type="text" value="">
             </div>
-            <div class="password">
-                <h4>Password</h4>
+            <div class="password" >
+                <h4 for="password">Password</h4>
                 <input id="password" name="password" required type="password" value="">
             </div>
             <div class="confirm-password">
-                <h4>Confirm Password</h4>
-                <input id="confirm_password" name="confirm_password" required  type="password" value="">
+                <h4 for="confirm_password">Confirm Password</h4>
+                <input id="confirm_password" name="confirm_password" required type="password" value="">
             </div><br>
-            <div class="submit" style="text-align:center">
+            <div class="submit">
                 <input id="submit" name="submit" type="submit" value="Sign Up">
             </div>
         </form>
         {{ error }}
     </div>
-
-    <div id="footer">
-        <diV style="border: 1px solid yellow;"></diV>
-        <div id="container">
+        <div id="footer">
+        <div>
             <div id="address">
-                <h4 style="color:#dacb46">Địa chỉ</h4>
-                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
-                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+                <h4>ADDRESS</h4>
+                <a>Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a>144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
             </div>
             <div id="about_us">
-                <h4 style="color:#dacb46">Thành viên</h4>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+                <h4>ABOUT US</h4>
+                <a>Nguyễn Hoài Lâm - 18020748</a><br>
+                <a>Nguyễn Thành Đạt - 18020297</a>
             </div>
             <div id="contact">
-                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+                <h4>CONTACT</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-instagram-square"></i></a>
+
             </div>
         </div>
     </div>

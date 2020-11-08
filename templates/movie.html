@@ -6,34 +6,29 @@
 {% block container %}
     <header>
         <nav>
-            <a href="/">
+            <a href="/" id="logo">
                 <img src="{{ url_for('static', filename='img/logo/logo.png') }}">
             </a>
             <div class="user">
                 {% if not username %}
                     <div class="login-signup-form">
-                        <form action="" method="post">
+                        <form action="" method="POST">
                             <span>{{ login_signup_form.login }}</span>
                             <span>{{ login_signup_form.signup }}</span>
                         </form>
                     </div>
                 {% endif %}
                 {% if username %}
-                    <div id="welcome" style="display:inline;margin-right:5px">
+                    <div id="welcome">
                         Welcome, {{ username }}
                     </div>
-                    <div id="log_out" style="display:inline">
-                        <a href="{{ url_for('log_out') }}" style="text-decoration:none;color:#dec700">Log out</a>
+                    <div id="log_out">
+                        <a href="{{ url_for('log_out') }}" id="btn-log-out">Log out</a>
                     </div>
-<!--                    {% block user_things %}-->
-<!--                        //some user things-->
-<!--                    {% endblock %}-->
                 {% endif %}
             </div>
         </nav>
     </header>
-    <diV style="border: 1px solid yellow;">
-    </diV>
     <div id="container">
         <div class="text-content">
             <h2>
@@ -57,7 +52,7 @@
         </div>
         <div class="trailer">
             <h2>TRAILER</h2>
-            <video width="500" height="auto" controls class="video">
+            <video width="500" height="auto" controls>
                 <source src="{{ url_for('static', filename=trailer_url) }}">
             </video>
         </div>
@@ -75,23 +70,21 @@
         {% endif %}
     </div>
     <div id="footer">
-        <diV style="border: 1px solid yellow;">
-        </diV>
-        <div id="search">
+        <div>
             <div id="address">
-                <h4 style="color:#dacb46">Địa chỉ</h4>
-                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
-                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+                <h4>ADDRESS</h4>
+                <a>Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a>144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
             </div>
             <div id="about_us">
-                <h4 style="color:#dacb46">Thành viên</h4>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+                <h4>ABOUT US</h4>
+                <a>Nguyễn Hoài Lâm - 18020748</a><br>
+                <a>Nguyễn Thành Đạt - 18020297</a>
             </div>
             <div id="contact">
-                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="{{ url_for('static', filename='img/icon/facebook.jpg') }}" width="40px" height="40px"></a>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="{{ url_for('static', filename='img/icon/instagram.png') }}" width="40px" height="40px"></a>
+                <h4>CONTACT</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-instagram-square"></i></a>
             </div>
         </div>
     </div>
