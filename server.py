@@ -136,15 +136,18 @@ def log_out():
 @web.route("/search", methods=["GET", "POST"])
 def show_search():
     login_signup_form = LoginSignupForm()
+
     if not session.get("username") is None:
         username = session["username"]
     else:
         username = None
+
     if login_signup_form.is_submitted():
         if login_signup_form.login.data:
             return redirect("login")
         if login_signup_form.signup.data:
             return redirect("signup")
+
     film_ids = request.args.getlist("id_info")
     film_objects = []
     retrieve_info = "select * from film where film_id = %s"
@@ -159,15 +162,27 @@ def show_search():
 # ----------------------MOVIE PAGE--------------------------------
 @web.route("/movie/<film_id>", methods=["GET", "POST"])
 def movie_show(film_id):
+    login_signup_form = LoginSignupForm()
+
+    if not session.get("username") is None:
+        username = session["username"]
+    else:
+        username = None
+
+    if login_signup_form.is_submitted():
+        if login_signup_form.login.data:
+            return redirect(url_for("login"))
+        if login_signup_form.signup.data:
+            return redirect(url_for("signup"))
+
     select_movie = "select * from film where film_id = %s"
     cursor.execute(select_movie, (film_id,))
     result = cursor.fetchone()
 
-
     # find director_id
     dir_id = result[9]
     select_dir = "select name from director where director_id = %s"
-    cursor.execute(select_dir, (dir_id,));
+    cursor.execute(select_dir, (dir_id,))
     director = cursor.fetchone()
 
     # find star_id
@@ -185,14 +200,13 @@ def movie_show(film_id):
         star_name_result += [star_name[0]]
 
     title = result[1]
-    release_year = result[3]
-    length = result[4]
     description = result[5]
     poster_url = result[7]
     trailer_url = result[8]
 
     if not session.get("logged_in") is None:
         user_rating_form = UserRating()
+
         if user_rating_form.is_submitted():
             rating = request.form
             user_rating = rating.get("rating")
@@ -201,12 +215,9 @@ def movie_show(film_id):
             cursor.execute(import_sql, val)
             mydb.commit()
 
-    #     return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, length=length, release_year=release_year, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
-    # return render_template("movie.html", title=title, description=description, poster_url=poster_url, length=length, release_year=release_year, trailer_url=trailer_url, login_signup_form=login_signup_form, username=username)
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form, username=username)
 
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form, login_signup_form=login_signup_form, username=username)
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, login_signup_form=login_signup_form, username=username)
-
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, login_signup_form=login_signup_form)
 
 
 if __name__ == "__main__":
