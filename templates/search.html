@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Search result</title>
+    <script src="https://kit.fontawesome.com/603ee0b5e1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/">
+            <a href="/" id="logo">
                 <img src="static/img/logo/logo.png">
             </a>
             <div class="user">
@@ -21,27 +22,21 @@
                     </div>
                 {% endif %}
                 {% if username %}
-                    <div id="welcome">
+                    <div id="welcome" style="display:inline;margin-right:5px">
                         Welcome, {{ username }}
                     </div>
                     <div id="log_out">
-                        <a href="{{ url_for('log_out') }}">Log out</a>
+                        <a href="{{ url_for('log_out') }}" id="btn-log-out">Log out</a>
                     </div>
-<!--                    {% block user_things %}-->
-<!--                        //some user things-->
-<!--                    {% endblock %}-->
                 {% endif %}
             </div>
         </nav>
     </header>
-    <diV style="border: 1px solid yellow;">
-    </diV>
     <nav>
         <div class="number_search">
-            <a>Số kết quả tìm kiếm : {{ cnt }} </a>
+            <a>RESULTS: {{ cnt }} </a>
         </div>
     </nav>
-    <diV style="border: 1px solid yellow;"></div>
     <div class="movie_elements">
             {% for x in result %}
                 <a  href="/movie/{{x.film_id}}" class="movie">
@@ -50,34 +45,29 @@
                     </div>
                     <div class="info">
                         <ul>
-                            <li><p class="film_title" style="color: #44e2ff;font-size: 16px;font-weight: 700; line-height:40px">{{x.title}}</p></li>
-                            <li><p class="film_length" style="color: #777;font-size: 12px;">{{x.length}}</p></li>
+                            <li><p class="film_title">{{x.title}}</p></li>
+                            <li><p class="film_length">{{x.length}} | {{x.certificate}}</p></li>
                         </ul>
                     </div>
                 </a>
-
             {% endfor %}
-
-
     </div>
-    <diV style="border: 1px solid yellow;"></diV>
-    <div id="footer">
-
+   <div id="footer">
         <div>
             <div id="address">
-                <h4 style="color:#dacb46">Địa chỉ</h4>
-                <a style="color: #bbb; font-size: 14px;">Trường Đại học Công nghệ - ĐHQGHN</a><br>
-                <a style="color: #bbb; font-size: 14px;">144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
+                <h4>ADDRESS</h4>
+                <a>Trường Đại học Công nghệ - ĐHQGHN</a><br>
+                <a>144 Xuân Thủy, Cầu Giấy, Hà Nội</a>
             </div>
             <div id="about_us">
-                <h4 style="color:#dacb46">Thành viên</h4>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Hoài Lâm - 18020748</a><br>
-                <a style="color: #bbb; font-size: 14px;">Nguyễn Thành Đạt - 18020297</a>
+                <h4>ABOUT US</h4>
+                <a>Nguyễn Hoài Lâm - 18020748</a><br>
+                <a>Nguyễn Thành Đạt - 18020297</a>
             </div>
             <div id="contact">
-                <h4 style="color:#dacb46">Kết nối với chúng tôi</h4>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/facebook.jpg" width="40px" height="40px"></a>
-                <a href="https://www.facebook.com/lamnh.nn"><img src="static/img/icon/instagram.png" width="40px" height="40px"></a>
+                <h4>CONTACT</h4>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/lamnh.nn"><i class="fab fa-instagram-square"></i></a>
             </div>
         </div>
     </div>

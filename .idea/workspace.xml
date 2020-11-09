@@ -19,10 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9f4d5e-e256-4e78-99b8-37b8deb94e6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6d9f4d5e-e256-4e78-99b8-37b8deb94e6f" name="Default Changelist" comment="Check data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/movie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/signin-up.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/signin-up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icon/facebook.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icon/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/logo/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/logo/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +65,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DataMining" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\DBMS\" />
+      <recent name="C:\Users\user\PycharmProjects\web" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.server">
     <configuration name="connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -141,11 +159,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DBMS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.movie" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.connect" />
       </list>
     </recent_temporary>
@@ -161,7 +201,25 @@
       <option name="presentableId" value="Default" />
       <updated>1603811775448</updated>
     </task>
+    <task id="LOCAL-00001" summary="check data">
+      <created>1604130729602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604130729602</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Check data">
+      <created>1604832275341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604832275341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -179,43 +237,54 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/moviedb_project" />
     </ignored-roots>
+    <MESSAGE value="check data" />
+    <MESSAGE value="Check data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603868985304">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603868985304" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604119950269">
+    <state x="368" y="90" key="DiffContextDialog" timestamp="1604787145079">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1604119950269" />
-    <state width="936" height="343" key="GridCell.Tab.0.bottom" timestamp="1604130420300">
+    <state x="368" y="90" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604787145079" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1604852052426">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="936" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604130420300" />
-    <state width="936" height="343" key="GridCell.Tab.0.center" timestamp="1604130420299">
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1604852052426" />
+    <state width="1899" height="342" key="GridCell.Tab.0.bottom" timestamp="1604904305819">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="936" height="343" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604130420299" />
-    <state width="936" height="343" key="GridCell.Tab.0.left" timestamp="1604130420299">
+    <state width="1899" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604904305819" />
+    <state width="1899" height="342" key="GridCell.Tab.0.center" timestamp="1604904305819">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="936" height="343" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604130420299" />
-    <state width="936" height="343" key="GridCell.Tab.0.right" timestamp="1604130420300">
+    <state width="1899" height="342" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604904305819" />
+    <state width="1899" height="342" key="GridCell.Tab.0.left" timestamp="1604904305819">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="936" height="343" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604130420300" />
-    <state x="1014" y="242" key="RollbackChangesDialog" timestamp="1604121974421">
+    <state width="1899" height="342" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604904305819" />
+    <state width="1899" height="342" key="GridCell.Tab.0.right" timestamp="1604904305819">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1014" y="242" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604121974421" />
+    <state width="1899" height="342" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604904305819" />
+    <state x="1014" y="242" key="RollbackChangesDialog" timestamp="1604787162730">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1014" y="242" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604787162730" />
     <state x="760" y="167" key="SettingsEditor" timestamp="1604130330385">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="760" y="167" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1604130330385" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603987384701">
+    <state x="909" y="463" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604811473733">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603987384701" />
+    <state x="909" y="463" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1604811473733" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604240546930">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1604240546930" />
   </component>
 </project>
