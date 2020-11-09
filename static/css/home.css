@@ -4,16 +4,12 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-html {
-    height: 100%;
-}
-body {
-    min-height: 100%;
-}
+
 body{
-    position:relative;
     background-color: #2d3436;
     background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    background-position: center;
+    background-size: cover;
 }
 h2, h4, #welcome{
     color: #66FCF1;
@@ -117,8 +113,7 @@ header .user{
 
 .slide {
     width:70%;
-    display:relative;
-    margin:auto;
+    margin:10vh auto;
     height:auto;
 }
 #submit,#login,#signup {
@@ -153,8 +148,6 @@ header .user{
 
 #footer{
     display:block;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background: #0b0c10;
 }
@@ -206,6 +199,5 @@ header .user{
     border: none;
     outline: none;
     max-width: 100%;
-    margin-top: 5vh;
 }
 
