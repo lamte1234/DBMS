@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9f4d5e-e256-4e78-99b8-37b8deb94e6f" name="Default Changelist" comment="Fix error sign up login add favicon, add font awesome">
+    <list default="true" id="6d9f4d5e-e256-4e78-99b8-37b8deb94e6f" name="Default Changelist" comment="Fix css home">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604925087896</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix css home">
+      <created>1604928875447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604928875447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -234,7 +242,8 @@
     <MESSAGE value="check data" />
     <MESSAGE value="Check data" />
     <MESSAGE value="Fix error sign up login add favicon, add font awesome" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix error sign up login add favicon, add font awesome" />
+    <MESSAGE value="Fix css home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix css home" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603868985304">
@@ -249,22 +258,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1604852052426" />
-    <state width="1899" height="342" key="GridCell.Tab.0.bottom" timestamp="1604928350527">
+    <state width="1899" height="342" key="GridCell.Tab.0.bottom" timestamp="1604990703232">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604928350527" />
-    <state width="1899" height="342" key="GridCell.Tab.0.center" timestamp="1604928350527">
+    <state width="1899" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604990703232" />
+    <state width="1899" height="342" key="GridCell.Tab.0.center" timestamp="1604990703232">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="342" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604928350527" />
-    <state width="1899" height="342" key="GridCell.Tab.0.left" timestamp="1604928350527">
+    <state width="1899" height="342" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604990703232" />
+    <state width="1899" height="342" key="GridCell.Tab.0.left" timestamp="1604990703232">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="342" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604928350527" />
-    <state width="1899" height="342" key="GridCell.Tab.0.right" timestamp="1604928350527">
+    <state width="1899" height="342" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604990703232" />
+    <state width="1899" height="342" key="GridCell.Tab.0.right" timestamp="1604990703232">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="342" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604928350527" />
+    <state width="1899" height="342" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604990703232" />
     <state x="1014" y="242" key="RollbackChangesDialog" timestamp="1604787162730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
