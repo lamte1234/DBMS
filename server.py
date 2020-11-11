@@ -204,6 +204,14 @@ def movie_show(film_id):
     poster_url = result[7]
     trailer_url = result[8]
 
+    # find review and show them
+    show_review_sql = "select username, rating from user_rating where film_id = %s limit 3"
+    show_review_var = (film_id,)
+
+    cursor.execute(show_review_sql, show_review_var)
+    review_result = cursor.fetchall()
+
+
     if not session.get("logged_in") is None:
         user_rating_form = UserRating()
 
@@ -215,9 +223,9 @@ def movie_show(film_id):
             cursor.execute(import_sql, val)
             mydb.commit()
 
-        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form, username=username)
+        return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, user_rating_form=user_rating_form, username=username, review_result=review_result)
 
-    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, login_signup_form=login_signup_form)
+    return render_template("movie.html", title=title, description=description, poster_url=poster_url, trailer_url=trailer_url, director=director, star_name_result=star_name_result, login_signup_form=login_signup_form, review_result=review_result)
 
 
 if __name__ == "__main__":

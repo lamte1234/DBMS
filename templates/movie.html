@@ -60,14 +60,27 @@
         <div id="user_rate">
             <form id="review" method="POST">
                 <div>
-                    <h2 id="review-hr">REVIEW</h2>
+                    <h2 class="review-hr">REVIEW</h2>
                     {{ user_rating_form.rating(placeholder="Share your opinions") }}
                     {{ user_rating_form.submit() }}
                 </div>
-
             </form>
         </div>
         {% endif %}
+        <section id="review-user">
+            {% if not username %}
+                <h2 class="review-hr">REVIEW</h2>
+            {% endif %}
+            {% for x in review_result %}
+            <div class="user-review">
+                <div class="user-logo"><i class="far fa-user"></i></div>
+                <div class="review-area">
+                    <div class="username">{{ x[0] }}</div>
+                    <div class="review">{{ x[1] }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
     </div>
     <div id="footer">
         <div>
