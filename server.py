@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from form import SearchForm, LoginSignupForm, LoginForm, SignUpForm, UserRating
+import hashlib
 import mysql.connector
 from movie import Movie
 
@@ -86,7 +87,7 @@ def login():
         retrieve_user_info = "select * from user where username = %s"
         cursor.execute(retrieve_user_info, (username,))
         user_info = cursor.fetchone()
-        if user_info and username == user_info[0] and password == user_info[1]:
+        if user_info and username == user_info[0] and user_info[1] == hashlib.sha256(password.encode()).hexdigest():
             session["username"] = username
             session["logged_in"] = True
             return redirect(url_for("home"))
@@ -121,8 +122,9 @@ def signup():
                 cf_error = "Passwords must match"
                 return render_template("signup.html", signup_form=signup_form, error=cf_error)
             else:
-                insert_user = "insert into user (username, password) values (%s, %s)"
-                cursor.execute(insert_user, (username, password))
+                insert_user = "insert into user (username, password) values (%s, %s)" 
+                password_encode = hashlib.sha256(password.encode()).hexdigest()
+                cursor.execute(insert_user, (username, password_encode))
                 mydb.commit()
                 return redirect("login")
     return render_template("signup.html", signup_form=signup_form)
