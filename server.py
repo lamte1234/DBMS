@@ -41,12 +41,13 @@ def home():
         title = result.get("title")
         year = str(result.get("year"))
         director = result.get("director")
-        search_by_title = "select film_id from film where title = %s"
+        search_by_title = "select film_id from film where title like %s"
         search_by_year = "select film_id from film where release_year like %s"
         search_by_director = "select film_id from film f inner join director d on d.director_id = f.director_id where d.name = %s"
 
         if not title == "":
-            cursor.execute(search_by_title, (title,))
+            title_fix = title + "%"
+            cursor.execute(search_by_title, (title_fix,))
             film_list1 = cursor.fetchall()
             for fl in film_list1:
                 film_ids1.add(fl[0])
